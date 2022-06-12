@@ -1,0 +1,21 @@
+{
+    "name": "farzin/php-oo-practice",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Shop\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "farzin ghanbari",
+            "email": "farzin.dev@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    },
+    "scripts": {
+        "phpunit": "./vendor/bin/phpunit --testdox tests/"
+    }
+}
