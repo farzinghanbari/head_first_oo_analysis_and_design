@@ -4,11 +4,9 @@ namespace Shop\Classes\Inventory;
 
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
-use Shop\Classes\Guitar\Builder;
 use Shop\Classes\Guitar\Guitar;
+use Shop\Classes\Guitar\GuitarSpec;
 use SplDoublyLinkedList;
-use Shop\Classes\Guitar\Type;
-use Shop\Classes\Guitar\Wood;
 
 class Inventory
 {
@@ -20,10 +18,9 @@ class Inventory
     }
 
     public function addGuitar(string $serialNumber, float $price,
-        Builder $builder, string $model, Type $type,
-        Wood $backWood, Wood $topWood): void
+        GuitarSpec $guitarSpec): void
     {
-        $guitar = new Guitar($serialNumber, $price, $builder, $model, $type, $backWood, $topWood);
+        $guitar = new Guitar($serialNumber, $price, $guitarSpec);
         $this->guitars->push($guitar);
     }
 
@@ -38,21 +35,21 @@ class Inventory
         return null;
     }
 
-    public function search(Guitar $searchGuitar): SplDoublyLinkedList
+    public function search(GuitarSpec $searchGuitar): SplDoublyLinkedList
     {
         $matchingGuitars = new SplDoublyLinkedList();
         for ($this->guitars->rewind(); $this->guitars->valid(); $this->guitars->next()) {
             $guitar = $this->guitars->current();
 
-            if ($guitar->builder->toString() != $searchGuitar->builder->toString())
+            if ($guitar->guitarSpec->builder->toString() != $searchGuitar->builder->toString())
                 continue;
-            if ($guitar->model != $searchGuitar->model)
+            if ($guitar->guitarSpec->model != $searchGuitar->model)
                 continue;
-            if ($guitar->type->toString() != $searchGuitar->type->toString())
+            if ($guitar->guitarSpec->type->toString() != $searchGuitar->type->toString())
                 continue;
-            if ($guitar->backWood->toString() != $searchGuitar->backWood->toString())
+            if ($guitar->guitarSpec->backWood->toString() != $searchGuitar->backWood->toString())
                 continue;
-            if ($guitar->topWood->toString() != $searchGuitar->topWood->toString())
+            if ($guitar->guitarSpec->topWood->toString() != $searchGuitar->topWood->toString())
                 continue;
             $matchingGuitars->push($guitar);
         }
