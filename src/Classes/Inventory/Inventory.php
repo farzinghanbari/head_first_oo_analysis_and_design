@@ -40,16 +40,17 @@ class Inventory
         $matchingGuitars = new SplDoublyLinkedList();
         for ($this->guitars->rewind(); $this->guitars->valid(); $this->guitars->next()) {
             $guitar = $this->guitars->current();
+            $guitarSpec = $guitar->spec;
 
-            if ($guitar->guitarSpec->builder->toString() != $searchGuitar->builder->toString())
+            if ($guitarSpec->builder->toString() != $searchGuitar->builder->toString())
                 continue;
-            if ($guitar->guitarSpec->model != $searchGuitar->model)
+            if ($guitarSpec->model != $searchGuitar->model)
                 continue;
-            if ($guitar->guitarSpec->type->toString() != $searchGuitar->type->toString())
+            if ($guitarSpec->type->toString() != $searchGuitar->type->toString())
                 continue;
-            if ($guitar->guitarSpec->backWood->toString() != $searchGuitar->backWood->toString())
+            if ($guitarSpec->backWood->toString() != $searchGuitar->backWood->toString())
                 continue;
-            if ($guitar->guitarSpec->topWood->toString() != $searchGuitar->topWood->toString())
+            if ($guitarSpec->topWood->toString() != $searchGuitar->topWood->toString())
                 continue;
             $matchingGuitars->push($guitar);
         }
