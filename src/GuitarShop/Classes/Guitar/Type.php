@@ -13,8 +13,7 @@ enum Type implements ToString
 
     public function toString(): string
     {
-        return match($this)
-        {
+        return match ($this) {
             self::ACOUSTIC => 'Acoustic',
             self::ELECTRIC => 'Electric',
         };

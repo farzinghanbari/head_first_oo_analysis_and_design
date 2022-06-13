@@ -4,8 +4,14 @@ namespace App\GuitarShop\Classes\Guitar;
 
 class GuitarSpec
 {
-    public function __construct(public readonly Builder $builder, public readonly string $model, public readonly Type $type,
-                                public readonly Wood    $backWood, public readonly Wood $topWood, public readonly int $numStrings)
+    public function __construct(
+        public readonly Builder $builder,
+        public readonly string $model,
+        public readonly Type $type,
+        public readonly Wood    $backWood,
+        public readonly Wood $topWood,
+        public readonly int $numStrings
+    )
     {
     }
 

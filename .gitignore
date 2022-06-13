@@ -73,3 +73,5 @@ tags
 
 # End of https://www.toptal.com/developers/gitignore/api/composer,visualstudiocode,vim,phpunit
 .idea/
+.php-cs-fixer.cache
+tools/php-cs-fixer/vendor

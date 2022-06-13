@@ -19,8 +19,7 @@ enum Builder implements ToString
 
     public function toString(): string
     {
-        return match($this)
-        {
+        return match ($this) {
             self::FENDER => 'Fender',
             self::MARTIN => 'Martin',
             self::GIBSON => 'Gibson',

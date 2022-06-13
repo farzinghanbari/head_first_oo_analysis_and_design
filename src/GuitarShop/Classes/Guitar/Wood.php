@@ -20,8 +20,7 @@ enum Wood implements ToString
 
     public function toString(): string
     {
-        return match($this)
-        {
+        return match ($this) {
             self::INDIAN_ROSEWOOD => 'Indian Rosewood',
             self::BRAZILIAN_ROSEWOOD => 'Brazilian Rosewood',
             self::MAHOGANY => 'Mahogany',

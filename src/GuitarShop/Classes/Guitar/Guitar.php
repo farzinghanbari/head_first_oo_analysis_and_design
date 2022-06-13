@@ -7,8 +7,11 @@ require_once __DIR__ . '/../../../../vendor/autoload.php';
 class Guitar
 {
     private float $price;
-    public function __construct(public readonly string     $serialNumber, float $price,
-                                public readonly GuitarSpec $spec)
+    public function __construct(
+        public readonly string     $serialNumber,
+        float $price,
+        public readonly GuitarSpec $spec
+    )
     {
         $this->price = $price;
     }
