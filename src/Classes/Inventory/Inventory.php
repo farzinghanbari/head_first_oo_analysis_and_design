@@ -42,17 +42,9 @@ class Inventory
             $guitar = $this->guitars->current();
             $guitarSpec = $guitar->spec;
 
-            if ($guitarSpec->builder->toString() != $searchGuitar->builder->toString())
-                continue;
-            if ($guitarSpec->model != $searchGuitar->model)
-                continue;
-            if ($guitarSpec->type->toString() != $searchGuitar->type->toString())
-                continue;
-            if ($guitarSpec->backWood->toString() != $searchGuitar->backWood->toString())
-                continue;
-            if ($guitarSpec->topWood->toString() != $searchGuitar->topWood->toString())
-                continue;
-            $matchingGuitars->push($guitar);
+            if ($searchGuitar->isMatching($guitarSpec)) {
+                $matchingGuitars->push($guitar);
+            }
         }
         return $matchingGuitars;
     }
