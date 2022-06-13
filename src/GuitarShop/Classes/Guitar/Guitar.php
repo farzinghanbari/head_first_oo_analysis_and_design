@@ -1,8 +1,8 @@
 <?php
 
-namespace Shop\Classes\Guitar;
+namespace App\GuitarShop\Classes\Guitar;
 
-require_once __DIR__ . '/../../../vendor/autoload.php';
+require_once __DIR__ . '/../../../../vendor/autoload.php';
 
 class Guitar
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Shop\Classes\Guitar;
+namespace App\GuitarShop\Classes\Guitar;
 
 class GuitarSpec
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Shop\Classes\Guitar;
+namespace App\GuitarShop\Classes\Guitar;
 
-use Shop\Contracts\ToString;
+use App\GuitarShop\Contracts\ToString;
 
-require_once __DIR__ . '/../../../vendor/autoload.php';
+require_once __DIR__ . '/../../../../vendor/autoload.php';
 
 enum Type implements ToString
 {

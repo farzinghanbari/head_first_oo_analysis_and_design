@@ -1,13 +1,14 @@
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
+namespace GuitarShop;
+require_once __DIR__ . '/../../vendor/autoload.php';
 
+use App\GuitarShop\Classes\Guitar\Builder;
+use App\GuitarShop\Classes\Guitar\GuitarSpec;
+use App\GuitarShop\Classes\Guitar\Type;
+use App\GuitarShop\Classes\Guitar\Wood;
+use App\GuitarShop\Classes\Inventory\Inventory;
 use PHPUnit\Framework\TestCase;
-use Shop\Classes\Guitar\Builder;
-use Shop\Classes\Guitar\GuitarSpec;
-use Shop\Classes\Guitar\Type;
-use Shop\Classes\Guitar\Wood;
-use Shop\Classes\Inventory\Inventory;
 
 final class InventoryTest extends TestCase
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Shop\Classes\Inventory;
+namespace App\GuitarShop\Classes\Inventory;
 
-require_once __DIR__ . '/../../../vendor/autoload.php';
+require_once __DIR__ . '/../../../../vendor/autoload.php';
 
-use Shop\Classes\Guitar\Guitar;
-use Shop\Classes\Guitar\GuitarSpec;
+use App\GuitarShop\Classes\Guitar\Guitar;
+use App\GuitarShop\Classes\Guitar\GuitarSpec;
 use SplDoublyLinkedList;
 
 class Inventory
